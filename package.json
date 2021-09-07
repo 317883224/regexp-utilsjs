@@ -1,0 +1,15 @@
+{
+  "name": "regexp-utilsjs",
+  "version": "1.0.3",
+  "description": "通用的正则工具",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "regexp",
+    "rules"
+  ],
+  "author": "FYR",
+  "license": "ISC"
+}
