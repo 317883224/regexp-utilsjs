@@ -7,10 +7,10 @@ package-lock.json
 public
 .browserslistrc
 .editorconfig
-.eslintrc
+.eslintrc.js
 .gitignore
 babel.config.js
-vue.config
+vue.config.js
 *.map
 *.html
 lib/configjs-utilsjs.common.js

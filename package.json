@@ -1,29 +1,36 @@
 {
-	"name": "regexp-utilsjs",
-	"version": "2.0.3",
-	"description": "通用的正则工具",
-	"main": "lib/index.js",
-	"repository": "https://github.com/317883224/regexp-utilsjs",
-	"homepage": "https://www.npmjs.com/package/regexp-utilsjs",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "gulp"
-	},
-	"keywords": [
-		"regexp",
-		"rules"
-	],
-	"author": "FYR",
-	"license": "ISC",
-	"devDependencies": {
-		"gulp": "^4.0.2",
-		"gulp-clean": "^0.4.0",
-		"gulp-connect": "^5.7.0",
-		"gulp-jshint": "^2.1.0",
-		"gulp-notify": "^4.0.0",
-		"gulp-remove-logging": "^1.2.0",
-		"gulp-strip-debug": "^4.0.0",
-		"gulp-uglify": "^3.0.2",
-		"gulp-util": "^3.0.8"
-	}
+  "name": "regexp-utilsjs",
+  "version": "1.0.3",
+  "description": "通用的正则工具",
+  "main": "lib/index/index.js",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+	"lib": "vue-cli-service build --target lib --name index --dest lib packages/index.js"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "keywords": [
+    "regexp",
+    "rules"
+  ],
+  "author": "FYR",
+  "license": "ISC"
 }
