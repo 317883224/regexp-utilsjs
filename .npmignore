@@ -1,0 +1,36 @@
+.DS_Store
+node_modules
+packages
+examples
+vue.config.js
+package-lock.json
+public
+.browserslistrc
+.editorconfig
+.eslintrc
+.gitignore
+babel.config.js
+vue.config
+*.map
+*.html
+lib/configjs-utilsjs.common.js
+lib/configjs-utilsjs.umd.js
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+components/*.text

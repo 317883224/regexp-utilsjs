@@ -8,6 +8,7 @@
 class regexp {
 	// 正则判断
 	test(value) {
+		console.log(1)
 		if (!this.testRule) return console.warn('test is not a function');
 		return value ? this.testRule.test(value) : true;
 	};
@@ -155,9 +156,6 @@ export const phoneRegexp = new class extends regexp {
 		this.testRule = /^(0\d{2,3}\-)?([2-9]\d{6,7})(\-\d{1,4})?$|^((\+?86|0086)\-)?1[3,4,5,7,8,9]\d{9}$/;
 		return this;
 	}
-	replace() {
-		console.warn('replace is not a function');
-	}
 }
 
 // 身份证
@@ -176,8 +174,5 @@ export const internetURLRegexp = new class extends regexp {
 		super();
 		this.testRule = /^(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?$/;
 		return this;
-	}
-	replace() {
-		console.warn('replace is not a function');
 	}
 }
