@@ -149,11 +149,29 @@ export const emailRegexp = new class extends regexp {
 	}
 }
 
-// 手机或电话
+// 联系方式，包括手机号和固定电话
+export const contactRegexp = new class extends regexp {
+	constructor() {
+		super();
+		this.testRule = /^(0\d{2,3}\-?)?([2-9]\d{6,7})(\-\d{1,4})?$|^((\+?86|0086)\-)?1[3,4,5,7,8,9]\d{9}$/;
+		return this;
+	}
+}
+
+// 手机号
 export const phoneRegexp = new class extends regexp {
 	constructor() {
 		super();
-		this.testRule = /^(0\d{2,3}\-)?([2-9]\d{6,7})(\-\d{1,4})?$|^((\+?86|0086)\-)?1[3,4,5,7,8,9]\d{9}$/;
+		this.testRule = /^((\+?86|0086)\-)?1[3,4,5,7,8,9]\d{9}$/;
+		return this;
+	}
+}
+
+// 固定电话
+export const landlineRegexp = new class extends regexp {
+	constructor() {
+		super();
+		this.testRule = /^(0\d{2,3}\-?)?([2-9]\d{6,7})(\-\d{1,4})?$/;
 		return this;
 	}
 }
