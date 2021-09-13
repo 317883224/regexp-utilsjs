@@ -1,6 +1,6 @@
 {
 	"name": "regexp-utilsjs",
-	"version": "2.0.3",
+	"version": "2.0.0",
 	"description": "通用的正则工具",
 	"main": "lib/index.js",
 	"repository": "https://github.com/317883224/regexp-utilsjs",
