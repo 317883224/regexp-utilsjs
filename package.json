@@ -1,29 +1,31 @@
 {
-	"name": "regexp-utilsjs",
-	"version": "2.0.0",
-	"description": "通用的正则工具",
-	"main": "lib/index.js",
-	"repository": "https://github.com/317883224/regexp-utilsjs",
-	"homepage": "https://www.npmjs.com/package/regexp-utilsjs",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "gulp"
-	},
-	"keywords": [
-		"regexp",
-		"rules"
-	],
-	"author": "FYR",
-	"license": "ISC",
-	"devDependencies": {
-		"gulp": "^4.0.2",
-		"gulp-clean": "^0.4.0",
-		"gulp-connect": "^5.7.0",
-		"gulp-jshint": "^2.1.0",
-		"gulp-notify": "^4.0.0",
-		"gulp-remove-logging": "^1.2.0",
-		"gulp-strip-debug": "^4.0.0",
-		"gulp-uglify": "^3.0.2",
-		"gulp-util": "^3.0.8"
-	}
+    "name": "regexp-utilsjs",
+    "version": "2.0.0",
+    "description": "通用的正则工具",
+    "main": "lib/index.js",
+    "repository": "https://github.com/317883224/regexp-utilsjs",
+    "homepage": "https://www.npmjs.com/package/regexp-utilsjs",
+    "scripts": {
+        "serve": "gulp serve",
+        "build": "gulp build",
+        "jshint": "gulp jshint"
+    },
+    "keywords": [
+        "regexp",
+        "rules"
+    ],
+    "author": "FYR",
+    "license": "ISC",
+    "devDependencies": {
+        "gulp": "^4.0.2",
+        "gulp-clean": "^0.4.0",
+        "gulp-connect": "^5.7.0",
+        "gulp-jshint": "^2.1.0",
+        "gulp-notify": "^4.0.0",
+        "gulp-remove-logging": "^1.2.0",
+        "gulp-strip-debug": "^4.0.0",
+        "gulp-uglify": "^3.0.2",
+        "gulp-util": "^3.0.8",
+        "gulp-watch": "^5.0.1"
+    }
 }

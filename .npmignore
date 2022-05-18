@@ -1,20 +1,11 @@
 .DS_Store
 node_modules
-packages
-examples
-vue.config.js
-package-lock.json
-public
-.browserslistrc
-.editorconfig
-.eslintrc
-.gitignore
-babel.config.js
-vue.config
-*.map
 *.html
-lib/configjs-utilsjs.common.js
-lib/configjs-utilsjs.umd.js
+.gitignore
+gulpfile.js
+package-lock.json
+examples/*
+serve/*
 
 # local env files
 .env.local
@@ -26,8 +17,11 @@ yarn-debug.log*
 yarn-error.log*
 
 # Editor directories and files
+.vscode/*
+.history/*
+!.vscode/extensions.json
 .idea
-.vscode
+.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
