@@ -4,13 +4,16 @@
  * @Author: FYR
  * @Date: 2023-11-01 11:36:16
  * @LastEditors: FYR
- * @LastEditTime: 2023-11-01 11:57:48
+ * @LastEditTime: 2023-11-01 16:49:20
  * @Description: 中文正则
  */
-import { regexp } from '../base/index';
+import { test, replace } from '../base/index';
 
-export default new (class extends regexp {
-    constructor() {
-        super(/^[\u4e00-\u9fa5]*$/, /[^\u4e00-\u9fa5]/g);
-    }
-})();
+function chineseRegexp() {}
+
+chineseRegexp.testRule = /^[\u4e00-\u9fa5]*$/;
+chineseRegexp.replaceRule = /[^\u4e00-\u9fa5]/g;
+chineseRegexp.test = test;
+chineseRegexp.replace = replace;
+
+export default chineseRegexp;

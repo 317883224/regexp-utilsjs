@@ -29,3 +29,25 @@ export class regexp {
         }
     }
 }
+
+/*
+ * @description: 正则判断
+ * @param {string} value 判断内容
+ * @return {boolean} 判断结果
+ */
+export function test(value) {
+    return value ? this.testRule.test(value) : true;
+}
+
+/*
+ * @description: 正则替换
+ * @param {string} value 内容
+ * @return {string} 替换后的内容
+ */
+export function replace(value) {
+    if (value) {
+        return value.replace(this.replaceRule, '');
+    } else {
+        return '';
+    }
+}

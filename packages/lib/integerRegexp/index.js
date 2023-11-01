@@ -4,18 +4,19 @@
  * @Author: FYR
  * @Date: 2023-11-01 11:34:53
  * @LastEditors: FYR
- * @LastEditTime: 2023-11-01 11:59:19
+ * @LastEditTime: 2023-11-01 16:53:48
  * @Description: 整数正则
  */
-import { regexp } from '../base/index';
+import { test } from '../base/index';
 
-export default new (class extends regexp {
-    constructor() {
-        super(/^\-?\d+$/, /\D/g);
-    }
+function integerRegexp() {}
 
-    replace(value) {
-        value = value.toString();
-        return value.replace(this.replaceRule, (item, index, value) => (item === '-' && index === 0 ? item : ''));
-    }
-})();
+integerRegexp.testRule = /^\-?\d+$/;
+integerRegexp.replaceRule = /\D/g;
+integerRegexp.test = test;
+integerRegexp.replace = function (value) {
+    value = value.toString();
+    return value.replace(this.replaceRule, (item, index, value) => (item === '-' && index === 0 ? item : ''));
+};
+
+export default integerRegexp;

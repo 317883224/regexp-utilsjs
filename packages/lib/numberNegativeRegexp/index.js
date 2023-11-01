@@ -4,23 +4,24 @@
  * @Author: FYR
  * @Date: 2023-11-01 11:34:28
  * @LastEditors: FYR
- * @LastEditTime: 2023-11-01 15:03:26
+ * @LastEditTime: 2023-11-01 16:57:54
  * @Description: 负数正则
  */
-import { regexp } from '../base/index';
+import { test } from '../base/index';
 
-export default new (class extends regexp {
-    constructor() {
-        super(/^\-(\d+|\d+\.\d+)$/, /\D/g);
-    }
+function numberNegativeRegexp() {}
 
-    replace(value) {
-        let decimalPointIndex; // 小数点的位置
-        value = value.toString();
-        decimalPointIndex = value.indexOf('.');
-        value = value.replace(this.replaceRule, (item, index, value) =>
-            (item === '-' && index === 0) || index === decimalPointIndex ? item : ''
-        );
-        return value < 0 ? value : '';
-    }
-})();
+numberNegativeRegexp.testRule = /^\-(\d+|\d+\.\d+)$/;
+numberNegativeRegexp.replaceRule = /\D/g;
+numberNegativeRegexp.test = test;
+numberNegativeRegexp.replace = function (value) {
+    let decimalPointIndex; // 小数点的位置
+    value = value.toString();
+    decimalPointIndex = value.indexOf('.');
+    value = value.replace(this.replaceRule, (item, index, value) =>
+        (item === '-' && index === 0) || index === decimalPointIndex ? item : ''
+    );
+    return value < 0 ? value : '';
+};
+
+export default numberNegativeRegexp;

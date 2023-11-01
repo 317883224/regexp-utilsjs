@@ -4,13 +4,14 @@
  * @Author: FYR
  * @Date: 2023-11-01 11:39:34
  * @LastEditors: FYR
- * @LastEditTime: 2023-11-01 11:39:35
+ * @LastEditTime: 2023-11-01 16:54:53
  * @Description: 网址正则
  */
-import { regexp } from '../base/index';
+import { test } from '../base/index';
 
-export default new (class extends regexp {
-    constructor() {
-        super(/^(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?$/);
-    }
-})();
+function internetURLRegexp() {}
+
+internetURLRegexp.testRule = /^(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?$/;
+internetURLRegexp.test = test;
+
+export default internetURLRegexp;

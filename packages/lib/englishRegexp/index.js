@@ -4,13 +4,16 @@
  * @Author: FYR
  * @Date: 2023-11-01 11:36:54
  * @LastEditors: FYR
- * @LastEditTime: 2023-11-01 11:36:54
+ * @LastEditTime: 2023-11-01 16:49:46
  * @Description: 英文正则
  */
-import { regexp } from '../base/index';
+import { test, replace } from '../base/index';
 
-export default new (class extends regexp {
-    constructor() {
-        super(/^[A-z]*$/, /[^A-z]/g);
-    }
-})();
+function englishRegexp() {}
+
+englishRegexp.testRule = /^[A-z]*$/;
+englishRegexp.replaceRule = /[^A-z]/g;
+englishRegexp.test = test;
+englishRegexp.replace = replace;
+
+export default englishRegexp;

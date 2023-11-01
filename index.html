@@ -9,9 +9,9 @@
         <script type="module">
             import { numberRegexp, numberPositiveRegexp, numberNegativeRegexp } from './serve/lib/index.js';
 
-            console.log(numberRegexp.replace('123122a'));
-            console.log(numberPositiveRegexp.replace('123122a'));
-            console.log(numberNegativeRegexp.replace('-123122a'));
+            console.log(numberRegexp.test('123122a'), numberRegexp.replace('123122a'), numberRegexp);
+            console.log(numberPositiveRegexp.test('123122a'), numberPositiveRegexp.replace('123122a'));
+            console.log(numberNegativeRegexp.test('-123122a'), numberNegativeRegexp.replace('-123122a'));
         </script>
     </body>
 </html>
