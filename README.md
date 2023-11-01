@@ -11,8 +11,6 @@ regexp-utilsjs 是317883224开源的正则方法库, 包含：数字，联系方
 ## 版本
 *  [2.0.0]
 	+ 修改打包架构，改用gulp打包
-*  [1.*.*]
-	+ 略
 
 ## 安装
 ```
@@ -46,7 +44,7 @@ numberRegexp.test(123) // true
 |     landlineRegexp     |            固定电话            | <span style="color: #409EFF;">√</span> | <span style="color: #F56C6C;">×</span> |
 |      idcardRegexp      |             身份证             | <span style="color: #409EFF;">√</span> | <span style="color: #F56C6C;">×</span> |
 |   internetURLRegexp    |              网址              | <span style="color: #409EFF;">√</span> | <span style="color: #F56C6C;">×</span> |
- 
+
 ## 联系方式
 
 - qq 317883224@qq.com

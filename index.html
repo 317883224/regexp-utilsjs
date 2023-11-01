@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <title>regexp-utilsjs</title>
+    </head>
+    <body>
+        <p>调试页面</p>
+        <script type="module">
+            import { numberRegexp, numberPositiveRegexp, numberNegativeRegexp } from './serve/lib/index.js';
+
+            console.log(numberRegexp.replace('123122a'));
+            console.log(numberPositiveRegexp.replace('123122a'));
+            console.log(numberNegativeRegexp.replace('-123122a'));
+        </script>
+    </body>
+</html>

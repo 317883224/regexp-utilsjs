@@ -4,8 +4,9 @@ node_modules
 .gitignore
 gulpfile.js
 package-lock.json
-examples/*
+packages/*
 serve/*
+config/*
 
 # local env files
 .env.local
