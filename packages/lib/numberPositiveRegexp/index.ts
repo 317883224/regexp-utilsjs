@@ -13,8 +13,8 @@ function numberPositiveRegexp() {}
 numberPositiveRegexp.testRule = /^\d+(\.\d+)?$/;
 numberPositiveRegexp.replaceRule = /\D/g;
 numberPositiveRegexp.test = test;
-numberPositiveRegexp.replace = function (value) {
-    let decimalPointIndex; // 小数点的位置
+numberPositiveRegexp.replace = function (value: string): string {
+    let decimalPointIndex: number; // 小数点的位置
         value = value.toString();
         decimalPointIndex = value.indexOf('.');
         return value.replace(this.replaceRule, (item, index) => (index === decimalPointIndex ? item : ''));

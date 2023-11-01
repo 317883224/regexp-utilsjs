@@ -14,14 +14,14 @@ function numberNegativeRegexp() {}
 numberNegativeRegexp.testRule = /^\-(\d+|\d+\.\d+)$/;
 numberNegativeRegexp.replaceRule = /\D/g;
 numberNegativeRegexp.test = test;
-numberNegativeRegexp.replace = function (value) {
-    let decimalPointIndex; // 小数点的位置
+numberNegativeRegexp.replace = function (value: string): string {
+    let decimalPointIndex: number; // 小数点的位置
     value = value.toString();
     decimalPointIndex = value.indexOf('.');
     value = value.replace(this.replaceRule, (item, index, value) =>
         (item === '-' && index === 0) || index === decimalPointIndex ? item : ''
     );
-    return value < 0 ? value : '';
+    return Number(value) < 0 ? value : '';
 };
 
 export default numberNegativeRegexp;

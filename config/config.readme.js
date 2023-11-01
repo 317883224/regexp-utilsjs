@@ -4,7 +4,7 @@
  * @Author: FYR
  * @Date: 2023-07-27 11:44:46
  * @LastEditors: FYR
- * @LastEditTime: 2023-11-01 15:42:26
+ * @LastEditTime: 2023-11-01 17:08:03
  * @Description: 请输入该文件的描述
  */
 
@@ -12,12 +12,10 @@ const fs = require('fs');
 const { resolve } = require('path');
 const blackList = ['base'];
 
-generateUnifiedExport();
-
 /*
  * @description: 生成统一导出
  */
-function generateUnifiedExport() {
+function generateReadme() {
     generateFile();
 }
 
@@ -35,7 +33,7 @@ function generateFile() {
     fileList
         .filter((item) => !blackList.includes(item))
         .forEach((file) => {
-            const filePath = resolve(`${path}/${file}/index.js`);
+            const filePath = resolve(`${path}/${file}/index.ts`);
 
             if (fs.existsSync(filePath)) {
                 let fileContent = fs.readFileSync(filePath, 'utf-8');
@@ -63,4 +61,4 @@ function generateFile() {
     writeStream.end();
 }
 
-module.exports = { generateUnifiedExport };
+module.exports = { generateReadme };
