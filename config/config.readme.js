@@ -4,7 +4,7 @@
  * @Author: FYR
  * @Date: 2023-07-27 11:44:46
  * @LastEditors: FYR
- * @LastEditTime: 2023-11-01 17:08:03
+ * @LastEditTime: 2023-11-01 17:44:22
  * @Description: 请输入该文件的描述
  */
 
@@ -41,7 +41,7 @@ function generateFile() {
 
                 content.push(
                     `| ${file} | ${description.replace('正则', '')} | <span style="color: #409EFF;">√</span> | ${
-                        fileContent.match(/super\(\/.+\/.{0,2}, \/.+\/.{0,2}\)/)
+                        fileContent.match(/\.replaceRule\s/)
                             ? '<span style="color: #409EFF;">√</span>'
                             : '<span style="color: #F56C6C;">×</span>'
                     } |`
